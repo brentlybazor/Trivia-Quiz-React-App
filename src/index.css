@@ -22,7 +22,7 @@ body {
 .app {
   background-color: #252d4a;
   margin: 20px;
-  min-width: 300px;
+  min-width: 500px;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
@@ -74,6 +74,19 @@ body {
   cursor: pointer;
 }
 
+.textButton {
+  font-size: 16px;
+  display: flex;
+  color: #ffffff;
+  cursor: default;
+  padding-bottom: 20px;
+}
+
+.difficultyText {
+  font-size: 10px !important;
+  padding-bottom: 10px;
+}
+
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
@@ -82,11 +95,13 @@ body {
 }
 
 .question-count {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .question-count span {
-  font-size: 28px;
+  font-size: 24px;
+  display: block;
+  padding-bottom: 5px;
 }
 
 .question-text {

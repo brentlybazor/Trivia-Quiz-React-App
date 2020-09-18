@@ -80,7 +80,7 @@ export default function App() {
 			questionsAPIUrl = questionsAPIUrl + `&type=${questionType}`
 		}
 
-		if(questionDifficulty) { 
+		if (questionDifficulty) {
 			questionsAPIUrl = questionsAPIUrl + `&difficulty=${questionDifficulty}`
 		}
 
@@ -108,7 +108,7 @@ export default function App() {
 			.replace(/&deg;/g, `\u00B0`)
 			.replace(/&prime;/g, `'`)
 
-			
+
 		return newString;
 
 	}
@@ -202,8 +202,11 @@ export default function App() {
 			) : (
 						<>
 							<div className='question-section'>
+								<span className={'textButton'} onClick={finishQuiz}>&lt; Quit Quiz</span>
+
 								<div className='question-count'>
-									<span>Question {currentQuestion + 1}</span>/{questions.length}
+									<span>Question {currentQuestion + 1}/{questions.length}</span>
+									<span className={'difficultyText'}>Difficulty: {questions[currentQuestion].difficulty}</span>
 								</div>
 								<div className='question-text'>{questions[currentQuestion].question}</div>
 							</div>
@@ -214,9 +217,7 @@ export default function App() {
 							</div>
 						</>
 					)
-
 			}
-
 		</div>
 	);
 }
