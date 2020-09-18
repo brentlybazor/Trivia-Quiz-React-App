@@ -206,8 +206,6 @@ export default function App() {
 									<span>Question {currentQuestion + 1}</span>/{questions.length}
 								</div>
 								<div className='question-text'>{questions[currentQuestion].question}</div>
-								<div>{questions[currentQuestion].correct_answer}</div>
-								<div>{questions[currentQuestion].difficulty}</div>
 							</div>
 							<div className='answer-section'>
 								{questions[currentQuestion].answerOptions.map((answerOption) => (
