@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 export default function App() {
 
-	const { register, handleSubmit, watch, errors } = useForm();
+	const { register, handleSubmit } = useForm();
 
 	const [questions, setQuestions] = useState(undefined);
 	const [quizStarted, setQuizStarted] = useState(false);
