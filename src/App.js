@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
+import './App.css';
 
 export default function App() {
 
@@ -200,23 +201,23 @@ export default function App() {
 					}
 				</div>
 			) : (
-						<>
-							<div className='question-section'>
-								<span className={'textButton'} onClick={finishQuiz}>&lt; Quit Quiz</span>
+				<>
+					<div className='question-section'>
+						<span className={'textButton'} onClick={finishQuiz}>&lt; Quit Quiz</span>
 
-								<div className='question-count'>
-									<span>Question {currentQuestion + 1}/{questions.length}</span>
-									<span className={'difficultyText'}>Difficulty: {questions[currentQuestion].difficulty}</span>
-								</div>
-								<div className='question-text'>{questions[currentQuestion].question}</div>
-							</div>
-							<div className='answer-section'>
-								{questions[currentQuestion].answerOptions.map((answerOption) => (
-									<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText, currentQuestion)}>{answerOption.answerText}</button>
-								))}
-							</div>
-						</>
-					)
+						<div className='question-count'>
+							<span>Question {currentQuestion + 1}/{questions.length}</span>
+							<span className={'difficultyText'}>Difficulty: {questions[currentQuestion].difficulty}</span>
+						</div>
+						<div className='question-text'>{questions[currentQuestion].question}</div>
+					</div>
+					<div className='answer-section'>
+						{questions[currentQuestion].answerOptions.map((answerOption) => (
+							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText, currentQuestion)}>{answerOption.answerText}</button>
+						))}
+					</div>
+				</>
+			)
 			}
 		</div>
 	);
